@@ -1,0 +1,8 @@
+library(utils)
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "getdata-projectfiles-UCI HAR Dataset.zip", "curl")
+download.time <- Sys.time()
+unzip("./getdata-projectfiles-UCI HAR Dataset.zip",exdir = ".")
+file.create("download_time.txt")
+savefile <- file("download_time.txt")
+writeLines(c("getdata-projectfiles-UCI HAR Dataset.zip", paste("downloaded at:", Sys.time())), savefile)
+close(savefile)
