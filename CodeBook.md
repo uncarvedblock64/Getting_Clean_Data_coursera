@@ -4,7 +4,7 @@
 
 ### Variable Selection
 
-Excluded Variables: Angle measurements including a mean reference vector and Frequency Mean measurements.  The angle measurements are actually mean measurements at all, but use the mean references as a reference point.  The Frequency Mean measurements were not included because they represent differnt physical significance from the mean acceleration and mean angular motion variables.  In addition, the project instructions specifically say mean and standard deviation: which matches up unambiguously with the measurements labeled mean() and std().
+Excluded Variables: 'Angle' measurements including a mean reference vector and 'Frequency Mean' measurements.  The angle measurements are not actually mean measurements at all, but use the mean references as a reference point.  The 'Frequency Mean' measurements were not included because they represent different physical significance from the mean acceleration and mean angular motion variables.  In addition, the project instructions specifically say mean and standard deviation: which matches up unambiguously with the measurements labeled mean() and std().
 
 ### Variable Naming
 
@@ -19,17 +19,14 @@ Excluded Variables: Angle measurements including a mean reference vector and Fre
 
 There were 68 variables included in the tidy data set.  The first 2 represent the activity occuring during the measurement: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING and a subject id number.  The remaining are measured sensor data as described above in the Variable naming discussion.
 
-1.   "Activity"
+1.   "Activity"  
+Activity names were translated from activity number in subject_train.txt and subject_test.txt, via lookup in the included activity_labels.txt file.  There are 7 activities: walking, walking upstairs, walking downstairs, sitting, standing, or laying.  
 
-Activity names were translated from activity number in subject_train.txt and subject_test.txt, via lookup in the included activity_labels.txt file.  There are 7 activities: walking, walking upstairs, walking downstairs, sitting, standing, or laying.
+2.   "Subject_id"  
+The subject_id was given the the included y_train.txt or y_test.txt files.  Based on the study definition, the subjects from the training set and the test set were joined into a single data set.  They were assigned at random to the training and testing sets, so there is no apparent need to include that data.  The information however can be looked up in the y_train.txt and y_test.txt files if desired.  
 
-2.   "Subject_id"
-
-The subject_id was given the the included y_train.txt or y_test.txt files.  Based on the study definition, the subjects from the training set and the test set were joined into a single data set.  They were assigned at random to the training and testing sets, so there is no apparent need to include that data.  The information however can be looked up in the y_train.txt and y_test.txt files if desired.
-
-3. - 68. See the explanation above in "Variable Naming".  The values are unitless and normalized between -1 and 1.
-
-3.   "TimeDomainBodyLinearAccel_Mean_X"
+3.   "TimeDomainBodyLinearAccel_Mean_X"  
+    no3. to no68. See the explanation above in "Variable Naming".  The values are unitless and normalized between -1 and +1.  
 4.   "TimeDomainBodyLinearAccel_Mean_Y"
 5.   "TimeDomainBodyLinearAccel_Mean_Z"
 6.   "TimeDomainBodyLinearAccel_StandardDev_X"
